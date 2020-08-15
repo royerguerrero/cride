@@ -25,4 +25,4 @@ def create_circle(request):
     serializer = CreateCircleSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
     circle = serializer.save()
-    return Response(CircleSerializer(circle).data)
+    return Response(CreateCircleSerializer(circle).data)
